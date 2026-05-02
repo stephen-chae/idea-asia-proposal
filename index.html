@@ -2,253 +2,150 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>IDEA Asia Partnership Proposal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDEA Asia 2026 - Final Proposal</title>
     <style>
         :root {
-            --primary-color: #002D62; /* Deep Blue */
-            --accent-color: #FFD700;  /* Gold */
-            --text-color: #FFFFFF;
-            --bg-color: #050505;
+            --accent: #FFD700;
+            --bg: #0a0a0a;
+            --text: #ffffff;
         }
-        body, html {
-            margin: 0; padding: 0;
-            width: 100%; height: 100%;
-            overflow: hidden;
-            font-family: 'Pretendard', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-        }
-        .slide {
-            display: none;
-            width: 100%; height: 100%;
-            padding: 5% 10%;
-            box-sizing: border-box;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            position: absolute;
-            transition: opacity 0.5s ease;
-        }
-        .slide.active { display: flex; opacity: 1; }
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; font-family: 'Pretendard', sans-serif; background: var(--bg); color: var(--text); }
+        .slide { display: none; width: 100%; height: 100%; padding: 40px 80px; box-sizing: border-box; position: absolute; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; }
+        .slide.active { display: grid; }
         
-        h1 { font-size: 5rem; margin: 0; color: var(--accent-color); line-height: 1.1; }
-        h2 { font-size: 3.5rem; margin-bottom: 2rem; border-left: 10px solid var(--accent-color); padding-left: 20px; }
-        p { font-size: 2rem; line-height: 1.6; max-width: 80%; }
-        ul { font-size: 1.8rem; line-height: 1.8; margin-top: 1rem; }
-        .highlight { color: var(--accent-color); font-weight: bold; }
+        .content { display: flex; flex-direction: column; justify-content: center; }
+        .image-slot { width: 100%; height: 60vh; background: #1a1a1a; border: 2px dashed #444; display: flex; align-items: center; justify-content: center; position: relative; color: #666; font-size: 1.2rem; border-radius: 15px; overflow: hidden; }
+        .image-slot::after { content: "여기에 관련 이미지를 삽입하세요"; }
         
-        .nav-buttons {
-            position: fixed; bottom: 30px; right: 50px;
-            display: flex; gap: 20px; z-index: 100;
+        h1 { font-size: 5rem; color: var(--accent); margin: 0; font-weight: 900; line-height: 1.1; }
+        h2 { font-size: 3.2rem; margin: 0 0 20px 0; border-left: 10px solid var(--accent); padding-left: 20px; }
+        p { font-size: 1.8rem; line-height: 1.6; color: #ccc; }
+        ul { font-size: 1.6rem; line-height: 1.8; list-style: none; padding: 0; }
+        ul li::before { content: "▶ "; color: var(--accent); }
+        
+        .nav { position: fixed; bottom: 30px; right: 50px; display: flex; gap: 15px; }
+        button { padding: 12px 25px; font-size: 1.1rem; background: var(--accent); border: none; border-radius: 5px; font-weight: bold; cursor: pointer; }
+        .pg { position: fixed; bottom: 35px; left: 50px; opacity: 0.5; font-size: 1.2rem; }
+        
+        @media (max-width: 1024px) {
+            .slide { grid-template-columns: 1fr; padding: 40px; text-align: center; }
+            h1 { font-size: 3.5rem; } h2 { font-size: 2.2rem; }
+            .image-slot { height: 30vh; }
+            ul { text-align: left; display: inline-block; }
         }
-        button {
-            padding: 15px 30px; font-size: 1.2rem;
-            background: var(--accent-color); border: none;
-            cursor: pointer; font-weight: bold;
-            border-radius: 5px;
-        }
-        .page-num { position: fixed; bottom: 30px; left: 50px; font-size: 1.2rem; opacity: 0.5; }
     </style>
 </head>
 <body>
 
     <div class="slide active">
-        <h1>IDEA ASIA 2026</h1>
-        <p style="font-size: 3rem; margin-top: 20px;">K-피트니스, 이제 세계의 표준이 됩니다.</p>
-        <p>글로벌 네트워크 기반의 산업 수출 및 전문가 양성 프로젝트</p>
+        <div class="content">
+            <h1>IDEA ASIA<br>2026</h1>
+            <p style="font-size: 2.5rem; margin-top: 20px;" class="highlight">대한민국, 아시아 피트니스의 리더가 되다.</p>
+            <p>정부기관 협력 기반의 K-Wellness 글로벌 네트워크 구축</p>
+        </div>
+        <div class="image-slot"></div>
     </div>
 
     <div class="slide">
-        <h2>세상은 지금 <span class="highlight">'K-피트니스'</span>를 기다립니다.</h2>
-        <p>단순한 유행을 넘어 하나의 산업 생태계로.<br>대한민국 웰니스의 저력을 아시아 전역에 이식합니다.</p>
+        <div class="content">
+            <h2>민간 단체를 넘어선<br>국가적 프로젝트</h2>
+            <p>문체부 및 대한체육회와의 긴밀한 파트너십을 통해<br>한국 피트니스 전문가의 해외 진출과 시스템 수출을 주도합니다.</p>
+        </div>
+        <div class="image-slot"></div>
     </div>
 
     <div class="slide">
-        <h2>40년의 공신력, IDEA World</h2>
-        <ul>
-            [span_0](start_span)<li>전 세계 80개국 이상의 피트니스 리더들이 참여[span_0](end_span)</li>
-            [span_1](start_span)<li>매년 5,000명 이상의 엘리트 전문가 집결[span_1](end_span)</li>
-            [span_2](start_span)<li>후원사 및 파트너사의 75%가 매년 재참여하는 압도적 신뢰[span_2](end_span)</li>
-        </ul>
+        <div class="content">
+            <h2>40년 전통의 권위<br>IDEA Health & Fitness</h2>
+            <ul>
+                <li>전 세계 80개국 이상의 리더들이 신뢰하는 교육 표준</li>
+                <li>연간 5,000명 이상의 글로벌 전문가 컨벤션 운영</li>
+                <li>검증된 커리큘럼을 통한 독보적인 시장 영향력</li>
+            </ul>
+        </div>
+        <div class="image-slot"></div>
     </div>
 
     <div class="slide">
-        <h2>IDEA Asia: 아시아 피트니스의 허브</h2>
-        <p>글로벌 표준 교육 시스템과 아시아의 시장 잠재력을 연결합니다.<br>우리는 민간 단체를 넘어선 <span class="highlight">글로벌 플랫폼</span>입니다.</p>
+        <div class="content">
+            <h2>K-웰니스,<br>아시아의 표준이 되다</h2>
+            <p>한국의 정교한 트레이닝 기술과 IT 기반 운영 시스템을<br>아시아 각국으로 전파하는 컨트롤 타워 역할을 수행합니다.</p>
+        </div>
+        <div class="image-slot"></div>
     </div>
 
     <div class="slide">
-        <h2>전문가 집단이 만드는 실질적인 변화</h2>
-        <p>15년 이상의 경력을 가진 인테리어 디자이너이자 CTO<br>디자인과 비즈니스 운영의 조화를 아는 전문가들이 이끕니다.</p>
+        <div class="content">
+            <h2>제대로 된 전문가가<br>산업을 바꿉니다</h2>
+            <p>단순 자격증 발급을 넘어, 글로벌 무대에서 활동할 수 있는<br>최정예 피트니스 비즈니스 리더를 양성합니다.</p>
+        </div>
+        <div class="image-slot"></div>
     </div>
 
     <div class="slide">
-        <h2>정부 기관과의 파트너십</h2>
-        <p>문화체육관광부, 대한체육회와의 긴밀한 협력.<br>민간을 넘어 <span class="highlight">국가적 차원의 피트니스 표준화</span>를 지향합니다.</p>
+        <div class="content">
+            <h2>비즈니스와 디자인의 결합</h2>
+            <p>15년 차 인테리어 전문가의 시각으로 설계된 공간 최적화,<br>운영 효율을 극대화하는 비즈니스 솔루션을 제공합니다.</p>
+        </div>
+        <div class="image-slot"></div>
     </div>
 
     <div class="slide">
-        <h2>VISION: K-Wellness의 글로벌 수출</h2>
-        <p>대한민국의 우수한 교육 콘텐츠와 장비 시스템을 네트워크화하여<br>아시아 각국으로 수출하는 교두보 역할을 수행합니다.</p>
+        <div class="content">
+            <h2>기업 파트너를 위한<br>압도적 혜택</h2>
+            <ul>
+                <li>정부 협력 프로젝트의 핵심 파트너사로 등재</li>
+                <li>아시아 시장 의사결정권자(센터 운영사) 직접 노출</li>
+                <li>글로벌 브랜드 인지도 상승 및 해외 진출 기회</li>
+            </ul>
+        </div>
+        <div class="image-slot"></div>
     </div>
 
     <div class="slide">
-        <h2>MISSION: 제대로 된 전문가 양성</h2>
-        <p>가장 공신력 있는 라이선스를 통해,<br>시장을 혁신할 수 있는 <span class="highlight">진짜 전문가</span>를 배출합니다.</p>
+        <div class="content">
+            <h2>당신의 전문성을<br>글로벌 브랜드로</h2>
+            <p>K-피트니스의 대표 얼굴이 되어 아시아 무대에 서십시오.<br>인플루언서의 가치를 산업적 자산으로 전환해 드립니다.</p>
+        </div>
+        <div class="image-slot"></div>
     </div>
 
     <div class="slide">
-        <h2>지금이 아시아 시장 선점의 적기입니다</h2>
-        <p>아시아 피트니스 시장은 매년 두 자릿수 성장을 거듭하고 있습니다.<br>글로벌 브랜드와 한국의 기술력이 만날 때 폭발적인 시너지가 발생합니다.</p>
+        <div class="content">
+            <h2>이미 준비된<br>디지털 인프라</h2>
+            <p>통합 웹 플랫폼과 자동화 시스템을 통해<br>파트너십의 성과를 실시간으로 확인하고 관리할 수 있습니다.</p>
+        </div>
+        <div class="image-slot"></div>
     </div>
 
-    <div class="slide">
-        <h2>우리가 만나는 핵심 타겟</h2>
-        <ul>
-            [span_3](start_span)<li>의사결정권자: 센터 소유주 및 매니저 (비즈니스 중심)[span_3](end_span)</li>
-            [span_4](start_span)<li>인플루언서: 퍼스널 트레이너 및 그룹 강사 (트렌드 리더)[span_4](end_span)</li>
-            [span_5](start_span)<li>정부 및 학계: 정책 입안자 및 체육계 교수진[span_5](end_span)</li>
-        </ul>
+    <div class="slide" style="grid-template-columns: 1fr; text-align: center;">
+        <div class="content" style="align-items: center;">
+            <h1>JOIN THE FUTURE</h1>
+            <p style="font-size: 2rem; margin-top: 30px;">아시아 피트니스의 새로운 장을 함께 엽니다.</p>
+            <p>E-mail: contact@idea-asia.com | www.idea-asia.com</p>
+        </div>
     </div>
 
-    <div class="slide">
-        <h2>2026 IDEA ASIA SUMMIT</h2>
-        <p>아시아 최대 규모의 B2B 네트워킹과 교육의 장.<br>전시를 넘어 비즈니스 매칭이 일어나는 현장입니다.</p>
-    </div>
-
-    <div class="slide">
-        <h2>세분화된 전문 교육 트랙</h2>
-        <ul>
-            [span_6](start_span)<li>Specialized Equipment: 필라테스 기구 및 첨단 장비[span_6](end_span)</li>
-            [span_7](start_span)<li>Business: 센터 운영 자동화 및 디지털 브랜딩[span_7](end_span)</li>
-            [span_8](start_span)<li>Science: 최신 운동 역학 및 영양학[span_8](end_span)</li>
-        </ul>
-    </div>
-
-    <div class="slide">
-        <h2>비즈니스 생태계 조성</h2>
-        <p>제조사, 인테리어 사, 소프트웨어 기업, 운영사를 하나로 묶어<br>지속 가능한 <span class="highlight">B2B 네트워크</span>를 구축합니다.</p>
-    </div>
-
-    <div class="slide">
-        <h2>글로벌로 연결되는 기회</h2>
-        <p>이탈리아 Rimini Wellness 등 글로벌 파트너와의 교류 지원<br>IDEA Asia를 통해 세계 무대로 진출하십시오.</p>
-    </div>
-
-    <div class="slide">
-        <h2>글로벌 연사를 초청합니다</h2>
-        <p>당신의 전문 지식이 아시아의 표준이 됩니다.<br><span class="highlight">K-피트니스의 얼굴</span>이 되어 주십시오.</p>
-    </div>
-
-    <div class="slide">
-        <h2>프리젠터를 위한 혜택</h2>
-        <ul>
-            <li>글로벌 전문가 프로필 브랜딩 및 홍보 지원</li>
-            <li>IDEA 공식 연사 위촉 및 네트워킹 파티 초대</li>
-            [span_9](start_span)<li>글로벌 컨벤션 참여 기회 및 전 세션 프리패스 제공[span_9](end_span)</li>
-        </ul>
-    </div>
-
-    <div class="slide">
-        <h2>브랜드 파트너를 모십니다</h2>
-        <p>단순한 광고를 넘어, 산업의 표준을 만드는 과정에 참여하십시오.<br>정부 협력 사업의 파트너로서 함께 성장합니다.</p>
-    </div>
-
-    <div class="slide">
-        <h2>압도적인 브랜드 가시성 확보</h2>
-        [span_10](start_span)<p>아시아 피트니스 시장의 리더들에게 가장 직접적으로 노출됩니다.<br>잠재 고객의 89%가 참관 후 구매 의사를 밝힙니다[span_10](end_span).</p>
-    </div>
-
-    <div class="slide">
-        <h2>Host Sponsor (Exclusive)</h2>
-        [span_11](start_span)<p>개막식 환영사 및 메인 교육 세션 독점 운영 권한.<br>브랜드를 행사 전체의 <span class="highlight">주인공</span>으로 만듭니다[span_11](end_span).</p>
-    </div>
-
-    <div class="slide">
-        <h2>분야별 전략적 스폰서십</h2>
-        [span_12](start_span)<p>특정 교육 트랙(필라테스, 비즈니스 등)을 독점 후원하여<br>타겟 오디언스에게 브랜드 리더십을 각인시킵니다[span_12](end_span).</p>
-    </div>
-
-    <div class="slide">
-        <h2>기억에 남는 브랜딩 경험</h2>
-        <ul>
-            [span_13](start_span)<li>손 소독 스테이션 및 건강 위생 스폰서[span_13](end_span)</li>
-            [span_14](start_span)<li>참가자 공식 랜야드 및 티셔츠 브랜드 노출[span_14](end_span)</li>
-            [span_15](start_span)<li>커피 카트 및 네트워킹 라운지 독점 브랜딩[span_15](end_span)</li>
-        </ul>
-    </div>
-
-    <div class="slide">
-        <h2>검증된 성공의 역사</h2>
-        [span_16](start_span)<p>Nike, Under Armour, Gatorade 등 글로벌 브랜드가 이미 함께하고 있습니다[span_16](end_span).<br>이제 아시아 시장의 새로운 역사를 함께 쓰십시오.</p>
-    </div>
-
-    <div class="slide">
-        <h2>2026 로드맵: 공식 시장 진출</h2>
-        <p>인프라 구축 완료 후, 본격적인 아시아 마켓 엔트리 진행<br>단계별 프로젝트를 통한 체계적인 성장을 약속합니다.</p>
-    </div>
-
-    <div class="slide">
-        <h2>피트니스 문화를 정의합니다</h2>
-        <p>우리는 운동을 가르치는 것을 넘어, 라이프스타일을 제안합니다.<br>더 건강한 아시아를 만드는 문화적 선구자가 되십시오.</p>
-    </div>
-
-    <div class="slide">
-        <h2>사례: 클래식 필라테스의 현대화</h2>
-        <p>Pilates Archive와 연계한 고품질 장비 및 교육 시스템 보급<br>전문성이 수익이 되는 구조를 증명합니다.</p>
-    </div>
-
-    <div class="slide">
-        <h2>완벽한 디지털 서포트</h2>
-        <p>통합 웹 플랫폼과 플랫폼 자동화를 통해<br>파트너십의 효과를 실시간으로 극대화합니다.</p>
-    </div>
-
-    <div class="slide">
-        <h2>기업 파트너십 문의</h2>
-        <p>브랜드의 미래를 IDEA Asia와 설계하십시오.<br>지금 바로 비즈니스 미팅을 예약하십시오.</p>
-    </div>
-
-    <div class="slide">
-        <h2>글로벌 프리젠터 지원</h2>
-        <p>당신의 가치를 세계에 알릴 무대가 준비되었습니다.<br>지금 지원하여 아시아의 리더가 되십시오.</p>
-    </div>
-
-    <div class="slide">
-        <h2>함께 새로운 지평을 엽니다</h2>
-        <p>E-mail: contact@idea-asia.com<br>Tel: +82 (0)2-XXX-XXXX<br>Web: www.idea-asia.com</p>
-    </div>
-
-    <div class="slide" style="align-items: center; text-align: center;">
-        <h1>JOIN THE MOVEMENT</h1>
-        <p style="font-size: 2.5rem; margin-top: 30px;">K-피트니스의 미래, IDEA Asia가 함께합니다.</p>
-    </div>
-
-    <div class="page-num" id="pageNum">1 / 30</div>
-
-    <div class="nav-buttons">
-        <button onclick="changeSlide(-1)">이전</button>
-        <button onclick="changeSlide(1)">다음</button>
+    <div class="pg" id="pg">1 / 10</div>
+    <div class="nav">
+        <button onclick="move(-1)">PREV</button>
+        <button onclick="move(1)">NEXT</button>
     </div>
 
     <script>
-        let currentSlide = 0;
+        let cur = 0;
         const slides = document.querySelectorAll('.slide');
-        const pageNum = document.getElementById('pageNum');
-
-        function showSlide(index) {
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (index + slides.length) % slides.length;
-            slides[currentSlide].classList.add('active');
-            pageNum.innerText = (currentSlide + 1) + " / " + slides.length;
+        const pg = document.getElementById('pg');
+        function move(n) {
+            slides[cur].classList.remove('active');
+            cur = (cur + n + slides.length) % slides.length;
+            slides[cur].classList.add('active');
+            pg.innerText = (cur + 1) + " / " + slides.length;
         }
-
-        function changeSlide(step) {
-            showSlide(currentSlide + step);
-        }
-
         window.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowRight') changeSlide(1);
-            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if(e.key === 'ArrowRight') move(1);
+            if(e.key === 'ArrowLeft') move(-1);
         });
     </script>
 </body>
